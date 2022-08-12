@@ -12,6 +12,24 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		150D4F5328A727BD00B26B5E /* RCTVibratorTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F5228A727BD00B26B5E /* RCTVibratorTester.m */; };
+		150D4F5C28A729DE00B26B5E /* RCTLineDrawTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F5B28A729DE00B26B5E /* RCTLineDrawTester.m */; };
+		150D4F5F28A729FB00B26B5E /* RCTKeysTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F5E28A729FB00B26B5E /* RCTKeysTester.m */; };
+		150D4F6228A72B4800B26B5E /* RCTPixelTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F6128A72B4800B26B5E /* RCTPixelTester.m */; };
+		150D4F6828A72C2800B26B5E /* RCTCameraTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F6728A72C2800B26B5E /* RCTCameraTester.m */; };
+		150D4F6B28A72CD900B26B5E /* RCTMicTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F6A28A72CD900B26B5E /* RCTMicTester.m */; };
+		150D4F6E28A72D6200B26B5E /* RCTFlashLightTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F6D28A72D6200B26B5E /* RCTFlashLightTester.m */; };
+		150D4F7128A72E8800B26B5E /* RCTProximityTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F7028A72E8800B26B5E /* RCTProximityTester.m */; };
+		150D4F7428A72EF700B26B5E /* RCTWifiTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F7328A72EF700B26B5E /* RCTWifiTester.m */; };
+		150D4F7728A72F7600B26B5E /* RCTDeviceInfoTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F7628A72F7600B26B5E /* RCTDeviceInfoTester.m */; };
+		150D4F7A28A7327500B26B5E /* RCTReportingTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D4F7928A7327500B26B5E /* RCTReportingTester.m */; };
+		15375AD528A6A0ED002AE3B3 /* libCustomAnalystLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15375AB528A6A0ED002AE3B3 /* libCustomAnalystLib.a */; };
+		15375AD828A6A2ED002AE3B3 /* RCTSpeakerTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 15375AD628A6A2ED002AE3B3 /* RCTSpeakerTester.m */; };
+		15375ADE28A6A422002AE3B3 /* 100Hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15375AD928A6A422002AE3B3 /* 100Hz.wav */; };
+		15375ADF28A6A422002AE3B3 /* sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15375ADA28A6A422002AE3B3 /* sound.wav */; };
+		15375AE028A6A422002AE3B3 /* 200Hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15375ADB28A6A422002AE3B3 /* 200Hz.wav */; };
+		15375AE128A6A422002AE3B3 /* detection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 15375ADC28A6A422002AE3B3 /* detection.aiff */; };
+		15375AE228A6A422002AE3B3 /* 300Hz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 15375ADD28A6A422002AE3B3 /* 300Hz.wav */; };
 		7699B88040F8A987B510C191 /* libPods-MyPhoneApp-MyPhoneAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MyPhoneApp-MyPhoneAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		988CBB97288E87AF00653548 /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 988CBB7D288E87AE00653548 /* Mulish-ExtraBold.ttf */; };
@@ -62,6 +80,65 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyPhoneApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyPhoneApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyPhoneApp/main.m; sourceTree = "<group>"; };
+		150D4F5128A727BD00B26B5E /* RCTVibratorTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTVibratorTester.h; sourceTree = "<group>"; };
+		150D4F5228A727BD00B26B5E /* RCTVibratorTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTVibratorTester.m; sourceTree = "<group>"; };
+		150D4F5A28A729DE00B26B5E /* RCTLineDrawTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTLineDrawTester.h; sourceTree = "<group>"; };
+		150D4F5B28A729DE00B26B5E /* RCTLineDrawTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTLineDrawTester.m; sourceTree = "<group>"; };
+		150D4F5D28A729FB00B26B5E /* RCTKeysTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTKeysTester.h; sourceTree = "<group>"; };
+		150D4F5E28A729FB00B26B5E /* RCTKeysTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTKeysTester.m; sourceTree = "<group>"; };
+		150D4F6028A72B4800B26B5E /* RCTPixelTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTPixelTester.h; sourceTree = "<group>"; };
+		150D4F6128A72B4800B26B5E /* RCTPixelTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTPixelTester.m; sourceTree = "<group>"; };
+		150D4F6628A72C2800B26B5E /* RCTCameraTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTCameraTester.h; sourceTree = "<group>"; };
+		150D4F6728A72C2800B26B5E /* RCTCameraTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTCameraTester.m; sourceTree = "<group>"; };
+		150D4F6928A72CD900B26B5E /* RCTMicTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTMicTester.h; sourceTree = "<group>"; };
+		150D4F6A28A72CD900B26B5E /* RCTMicTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTMicTester.m; sourceTree = "<group>"; };
+		150D4F6C28A72D6200B26B5E /* RCTFlashLightTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTFlashLightTester.h; sourceTree = "<group>"; };
+		150D4F6D28A72D6200B26B5E /* RCTFlashLightTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTFlashLightTester.m; sourceTree = "<group>"; };
+		150D4F6F28A72E8800B26B5E /* RCTProximityTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTProximityTester.h; sourceTree = "<group>"; };
+		150D4F7028A72E8800B26B5E /* RCTProximityTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTProximityTester.m; sourceTree = "<group>"; };
+		150D4F7228A72EF700B26B5E /* RCTWifiTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWifiTester.h; sourceTree = "<group>"; };
+		150D4F7328A72EF700B26B5E /* RCTWifiTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTWifiTester.m; sourceTree = "<group>"; };
+		150D4F7528A72F7600B26B5E /* RCTDeviceInfoTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTDeviceInfoTester.h; sourceTree = "<group>"; };
+		150D4F7628A72F7600B26B5E /* RCTDeviceInfoTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTDeviceInfoTester.m; sourceTree = "<group>"; };
+		150D4F7828A7327500B26B5E /* RCTReportingTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTReportingTester.h; sourceTree = "<group>"; };
+		150D4F7928A7327500B26B5E /* RCTReportingTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTReportingTester.m; sourceTree = "<group>"; };
+		15375AB528A6A0ED002AE3B3 /* libCustomAnalystLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCustomAnalystLib.a; sourceTree = "<group>"; };
+		15375AB828A6A0ED002AE3B3 /* MicTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicTester.h; sourceTree = "<group>"; };
+		15375AB928A6A0ED002AE3B3 /* SpeakerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerTest.h; sourceTree = "<group>"; };
+		15375ABA28A6A0ED002AE3B3 /* HeadsetTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadsetTester.h; sourceTree = "<group>"; };
+		15375ABB28A6A0ED002AE3B3 /* CosmeticQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CosmeticQuestion.h; sourceTree = "<group>"; };
+		15375ABC28A6A0ED002AE3B3 /* CosmeticTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CosmeticTest.h; sourceTree = "<group>"; };
+		15375ABD28A6A0ED002AE3B3 /* TestResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResults.h; sourceTree = "<group>"; };
+		15375ABE28A6A0ED002AE3B3 /* LineDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDrawViewController.h; sourceTree = "<group>"; };
+		15375ABF28A6A0ED002AE3B3 /* Vibrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vibrator.h; sourceTree = "<group>"; };
+		15375AC028A6A0ED002AE3B3 /* HardwareKeysDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardwareKeysDetector.h; sourceTree = "<group>"; };
+		15375AC128A6A0ED002AE3B3 /* CollectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectInfo.h; sourceTree = "<group>"; };
+		15375AC228A6A0ED002AE3B3 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		15375AC328A6A0ED002AE3B3 /* SensorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorTest.h; sourceTree = "<group>"; };
+		15375AC428A6A0ED002AE3B3 /* WifiTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiTester.h; sourceTree = "<group>"; };
+		15375AC528A6A0ED002AE3B3 /* PricingMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PricingMatrix.h; sourceTree = "<group>"; };
+		15375AC628A6A0ED002AE3B3 /* ProximityTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProximityTester.h; sourceTree = "<group>"; };
+		15375AC728A6A0ED002AE3B3 /* DeviceInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInformation.h; sourceTree = "<group>"; };
+		15375AC828A6A0ED002AE3B3 /* FlashLightTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashLightTester.h; sourceTree = "<group>"; };
+		15375AC928A6A0ED002AE3B3 /* DeclineOfferFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeclineOfferFeedback.h; sourceTree = "<group>"; };
+		15375ACA28A6A0ED002AE3B3 /* CustomerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDetails.h; sourceTree = "<group>"; };
+		15375ACB28A6A0ED002AE3B3 /* PotraitCameraControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotraitCameraControllerViewController.h; sourceTree = "<group>"; };
+		15375ACC28A6A0ED002AE3B3 /* MuteKeyDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuteKeyDetector.h; sourceTree = "<group>"; };
+		15375ACD28A6A0ED002AE3B3 /* PixelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PixelViewController.h; sourceTree = "<group>"; };
+		15375ACE28A6A0ED002AE3B3 /* GPSTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSTester.h; sourceTree = "<group>"; };
+		15375ACF28A6A0ED002AE3B3 /* CosmeticOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CosmeticOption.h; sourceTree = "<group>"; };
+		15375AD028A6A0ED002AE3B3 /* DashboardUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardUtility.h; sourceTree = "<group>"; };
+		15375AD128A6A0ED002AE3B3 /* CameraTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraTestViewController.h; sourceTree = "<group>"; };
+		15375AD228A6A0ED002AE3B3 /* TouchIDTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchIDTester.h; sourceTree = "<group>"; };
+		15375AD328A6A0ED002AE3B3 /* AccessTokenInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessTokenInfo.h; sourceTree = "<group>"; };
+		15375AD428A6A0ED002AE3B3 /* Support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Support.h; sourceTree = "<group>"; };
+		15375AD628A6A2ED002AE3B3 /* RCTSpeakerTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTSpeakerTester.m; sourceTree = "<group>"; };
+		15375AD728A6A2ED002AE3B3 /* RCTSpeakerTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTSpeakerTester.h; sourceTree = "<group>"; };
+		15375AD928A6A422002AE3B3 /* 100Hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 100Hz.wav; sourceTree = "<group>"; };
+		15375ADA28A6A422002AE3B3 /* sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound.wav; sourceTree = "<group>"; };
+		15375ADB28A6A422002AE3B3 /* 200Hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 200Hz.wav; sourceTree = "<group>"; };
+		15375ADC28A6A422002AE3B3 /* detection.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = detection.aiff; sourceTree = "<group>"; };
+		15375ADD28A6A422002AE3B3 /* 300Hz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 300Hz.wav; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-MyPhoneApp-MyPhoneAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyPhoneApp-MyPhoneAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-MyPhoneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhoneApp.debug.xcconfig"; path = "Target Support Files/Pods-MyPhoneApp/Pods-MyPhoneApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-MyPhoneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhoneApp.release.xcconfig"; path = "Target Support Files/Pods-MyPhoneApp/Pods-MyPhoneApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-MyPhoneApp.a in Frameworks */,
+				15375AD528A6A0ED002AE3B3 /* libCustomAnalystLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +242,14 @@
 		13B07FAE1A68108700A75B9A /* MyPhoneApp */ = {
 			isa = PBXGroup;
 			children = (
+				150D4F5028A7223100B26B5E /* analystlib */,
+				15375AB628A6A0ED002AE3B3 /* include */,
+				15375AB528A6A0ED002AE3B3 /* libCustomAnalystLib.a */,
+				15375AD928A6A422002AE3B3 /* 100Hz.wav */,
+				15375ADB28A6A422002AE3B3 /* 200Hz.wav */,
+				15375ADD28A6A422002AE3B3 /* 300Hz.wav */,
+				15375ADC28A6A422002AE3B3 /* detection.aiff */,
+				15375ADA28A6A422002AE3B3 /* sound.wav */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -172,6 +258,81 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = MyPhoneApp;
+			sourceTree = "<group>";
+		};
+		150D4F5028A7223100B26B5E /* analystlib */ = {
+			isa = PBXGroup;
+			children = (
+				150D4F5128A727BD00B26B5E /* RCTVibratorTester.h */,
+				150D4F5228A727BD00B26B5E /* RCTVibratorTester.m */,
+				150D4F5D28A729FB00B26B5E /* RCTKeysTester.h */,
+				150D4F5E28A729FB00B26B5E /* RCTKeysTester.m */,
+				150D4F5A28A729DE00B26B5E /* RCTLineDrawTester.h */,
+				150D4F5B28A729DE00B26B5E /* RCTLineDrawTester.m */,
+				150D4F6028A72B4800B26B5E /* RCTPixelTester.h */,
+				150D4F6128A72B4800B26B5E /* RCTPixelTester.m */,
+				15375AD728A6A2ED002AE3B3 /* RCTSpeakerTester.h */,
+				15375AD628A6A2ED002AE3B3 /* RCTSpeakerTester.m */,
+				150D4F6628A72C2800B26B5E /* RCTCameraTester.h */,
+				150D4F6728A72C2800B26B5E /* RCTCameraTester.m */,
+				150D4F6928A72CD900B26B5E /* RCTMicTester.h */,
+				150D4F6A28A72CD900B26B5E /* RCTMicTester.m */,
+				150D4F6C28A72D6200B26B5E /* RCTFlashLightTester.h */,
+				150D4F6D28A72D6200B26B5E /* RCTFlashLightTester.m */,
+				150D4F6F28A72E8800B26B5E /* RCTProximityTester.h */,
+				150D4F7028A72E8800B26B5E /* RCTProximityTester.m */,
+				150D4F7228A72EF700B26B5E /* RCTWifiTester.h */,
+				150D4F7328A72EF700B26B5E /* RCTWifiTester.m */,
+				150D4F7528A72F7600B26B5E /* RCTDeviceInfoTester.h */,
+				150D4F7628A72F7600B26B5E /* RCTDeviceInfoTester.m */,
+				150D4F7828A7327500B26B5E /* RCTReportingTester.h */,
+				150D4F7928A7327500B26B5E /* RCTReportingTester.m */,
+			);
+			path = analystlib;
+			sourceTree = "<group>";
+		};
+		15375AB628A6A0ED002AE3B3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				15375AB728A6A0ED002AE3B3 /* CustomAnalystLib */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		15375AB728A6A0ED002AE3B3 /* CustomAnalystLib */ = {
+			isa = PBXGroup;
+			children = (
+				15375AB828A6A0ED002AE3B3 /* MicTester.h */,
+				15375AB928A6A0ED002AE3B3 /* SpeakerTest.h */,
+				15375ABA28A6A0ED002AE3B3 /* HeadsetTester.h */,
+				15375ABB28A6A0ED002AE3B3 /* CosmeticQuestion.h */,
+				15375ABC28A6A0ED002AE3B3 /* CosmeticTest.h */,
+				15375ABD28A6A0ED002AE3B3 /* TestResults.h */,
+				15375ABE28A6A0ED002AE3B3 /* LineDrawViewController.h */,
+				15375ABF28A6A0ED002AE3B3 /* Vibrator.h */,
+				15375AC028A6A0ED002AE3B3 /* HardwareKeysDetector.h */,
+				15375AC128A6A0ED002AE3B3 /* CollectInfo.h */,
+				15375AC228A6A0ED002AE3B3 /* Test.h */,
+				15375AC328A6A0ED002AE3B3 /* SensorTest.h */,
+				15375AC428A6A0ED002AE3B3 /* WifiTester.h */,
+				15375AC528A6A0ED002AE3B3 /* PricingMatrix.h */,
+				15375AC628A6A0ED002AE3B3 /* ProximityTester.h */,
+				15375AC728A6A0ED002AE3B3 /* DeviceInformation.h */,
+				15375AC828A6A0ED002AE3B3 /* FlashLightTester.h */,
+				15375AC928A6A0ED002AE3B3 /* DeclineOfferFeedback.h */,
+				15375ACA28A6A0ED002AE3B3 /* CustomerDetails.h */,
+				15375ACB28A6A0ED002AE3B3 /* PotraitCameraControllerViewController.h */,
+				15375ACC28A6A0ED002AE3B3 /* MuteKeyDetector.h */,
+				15375ACD28A6A0ED002AE3B3 /* PixelViewController.h */,
+				15375ACE28A6A0ED002AE3B3 /* GPSTester.h */,
+				15375ACF28A6A0ED002AE3B3 /* CosmeticOption.h */,
+				15375AD028A6A0ED002AE3B3 /* DashboardUtility.h */,
+				15375AD128A6A0ED002AE3B3 /* CameraTestViewController.h */,
+				15375AD228A6A0ED002AE3B3 /* TouchIDTester.h */,
+				15375AD328A6A0ED002AE3B3 /* AccessTokenInfo.h */,
+				15375AD428A6A0ED002AE3B3 /* Support.h */,
+			);
+			path = CustomAnalystLib;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -389,12 +550,17 @@
 				988CBBA8288E87AF00653548 /* Montserrat-Medium.ttf in Resources */,
 				988CBB9B288E87AF00653548 /* Mulish-Regular.ttf in Resources */,
 				988CBBA4288E87AF00653548 /* MontserratAlternates-Medium.ttf in Resources */,
+				15375ADE28A6A422002AE3B3 /* 100Hz.wav in Resources */,
+				15375ADF28A6A422002AE3B3 /* sound.wav in Resources */,
+				15375AE228A6A422002AE3B3 /* 300Hz.wav in Resources */,
 				988CBBA6288E87AF00653548 /* MontserratAlternates-Thin.ttf in Resources */,
 				988CBB9E288E87AF00653548 /* Montserrat-Italic.ttf in Resources */,
 				988CBBAD288E87AF00653548 /* Montserrat-Regular.ttf in Resources */,
 				988CBB9C288E87AF00653548 /* OpenSans-ExtraBold.ttf in Resources */,
 				988CBBAF288E87AF00653548 /* Roboto-Regular.ttf in Resources */,
 				988CBBA5288E87AF00653548 /* SpaceMono-Regular.ttf in Resources */,
+				15375AE128A6A422002AE3B3 /* detection.aiff in Resources */,
+				15375AE028A6A422002AE3B3 /* 200Hz.wav in Resources */,
 				988CBBA3288E87AF00653548 /* OpenSans-SemiBold.ttf in Resources */,
 				988CBB9F288E87AF00653548 /* Montserrat-SemiBold.ttf in Resources */,
 				988CBBAC288E87AF00653548 /* MontserratAlternates-Regular.ttf in Resources */,
@@ -576,8 +742,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150D4F6228A72B4800B26B5E /* RCTPixelTester.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				150D4F6B28A72CD900B26B5E /* RCTMicTester.m in Sources */,
+				150D4F7A28A7327500B26B5E /* RCTReportingTester.m in Sources */,
+				150D4F5328A727BD00B26B5E /* RCTVibratorTester.m in Sources */,
+				15375AD828A6A2ED002AE3B3 /* RCTSpeakerTester.m in Sources */,
+				150D4F7128A72E8800B26B5E /* RCTProximityTester.m in Sources */,
+				150D4F5C28A729DE00B26B5E /* RCTLineDrawTester.m in Sources */,
+				150D4F6E28A72D6200B26B5E /* RCTFlashLightTester.m in Sources */,
+				150D4F6828A72C2800B26B5E /* RCTCameraTester.m in Sources */,
+				150D4F7428A72EF700B26B5E /* RCTWifiTester.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				150D4F5F28A729FB00B26B5E /* RCTKeysTester.m in Sources */,
+				150D4F7728A72F7600B26B5E /* RCTDeviceInfoTester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +835,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -682,6 +865,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

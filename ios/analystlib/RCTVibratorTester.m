@@ -35,4 +35,9 @@ RCT_EXPORT_METHOD(vibrateDevice)
   [_vibrator vibrateDevice];
 }
 
+RCT_EXPORT_METHOD(stopVibrate)
+{
+  [_vibrator stopVibrate];
+}
+
 @end

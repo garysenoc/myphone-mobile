@@ -3,8 +3,7 @@ import {NativeModules} from 'react-native';
 const {BluetoothTester} = NativeModules;
 
 interface AndroidBluetoothTesterInterface {
-  vibrateDevice(): void;
-  stopVibration(): void;
+  startBluetoothTest(): Promise<String>;
 }
 
 export const AndroidBluetoothTester: AndroidBluetoothTesterInterface =

@@ -27,7 +27,11 @@ public class GPSTester extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void isGPSEnabled(Promise promise) {
-        promise.resolve(gpsTester.isGPSEnabled(this.getReactApplicationContext()));
+        try{
+            promise.resolve(gpsTester.isGPSEnabled(this.getReactApplicationContext()));
+        }catch(Exception e) {
+            promise.reject("Error GPSTester isGPSEnabled", e);
+        }
     }
 
     @ReactMethod
@@ -41,7 +45,7 @@ public class GPSTester extends ReactContextBaseJavaModule {
             Location result = gpsTester.getLocation(this.getReactApplicationContext());
             promise.resolve(result.toString());
         } catch(Exception e){
-            promise.reject("Error processing GPSTester getLocation:", e);
+            promise.reject("Error GPSTester getLocation:", e);
         }
     }
 }

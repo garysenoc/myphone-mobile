@@ -8,17 +8,20 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
 import bb.com.bbanalyst.CollectInfo;
+import bb.com.bbanalyst.DashboardUtility;
 import bb.com.bbanalyst.DeviceInfoAPI;
 import bb.com.bbanalyst.IDeviceInfo;
+import bb.com.bbanalyst.ResultLog;
 
-public class DeviceInfoTester extends ReactContextBaseJavaModule {
+public class DeviceInfoTester extends ReactContextBaseJavaModule implements IDeviceInfo {
     CollectInfo collectInfo;
-    ChildClass childClass;
+    DeviceInfoAPI deviceInfoAPI;
+    DashboardUtility dashboardUtility;
 
     DeviceInfoTester(ReactApplicationContext context) {
         super(context);
         collectInfo = CollectInfo.getInstance();
-        childClass = new ChildClass();
+        dashboardUtility = new DashboardUtility();
     }
 
     @NonNull
@@ -30,10 +33,10 @@ public class DeviceInfoTester extends ReactContextBaseJavaModule {
     @ReactMethod
     public void collectAllInfo(Promise promise) {
         try{
-            collectInfo.collectAllInfo(this.getReactApplicationContext(), childClass);
-            promise.resolve(childClass.deviceInfoAPI.getiAndroidSerial());
+            collectInfo.collectAllInfo(this.getReactApplicationContext(), this);
+            promise.resolve(dashboardUtility.getTestResultJSON(new ResultLog(), deviceInfoAPI));
         } catch (Exception e){
-            promise.reject("DeviceInfoTester collecctAllInfo:",e);
+            promise.reject("Error DeviceInfoTester collectAllInfo:",e);
         }
     }
 
@@ -42,7 +45,7 @@ public class DeviceInfoTester extends ReactContextBaseJavaModule {
         try {
             promise.resolve(collectInfo.getBatteryHealth(this.getReactApplicationContext()));
         } catch (Exception e) {
-            promise.reject("DeviceInfoTester getBatteryHealth:", e);
+            promise.reject("Error DeviceInfoTester getBatteryHealth:", e);
         }
     }
 
@@ -56,15 +59,12 @@ public class DeviceInfoTester extends ReactContextBaseJavaModule {
         try {
             promise.resolve(collectInfo.isSimPresent(this.getReactApplicationContext()));
         } catch (Exception e) {
-            promise.reject("DeviceInfoTester isSimPresent:", e);
+            promise.reject("Error DeviceInfoTester isSimPresent:", e);
         }
     }
 
-    class ChildClass implements IDeviceInfo {
-        public DeviceInfoAPI deviceInfoAPI;
-        @Override
-        public void infoCollected(DeviceInfoAPI deviceInfoAPI) {
-            this.deviceInfoAPI = deviceInfoAPI;
-        }
+    @Override
+    public void infoCollected(DeviceInfoAPI deviceInfoAPI) {
+        this.deviceInfoAPI = deviceInfoAPI;
     }
 }

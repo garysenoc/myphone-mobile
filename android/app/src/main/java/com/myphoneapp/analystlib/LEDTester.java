@@ -9,14 +9,14 @@ import com.facebook.react.bridge.ReactMethod;
 
 import bb.com.bbanalyst.ILEDTester;
 
-public class LEDTester extends ReactContextBaseJavaModule {
+public class LEDTester extends ReactContextBaseJavaModule implements ILEDTester {
     bb.com.bbanalyst.LEDTester ledTester;
-    ChildClass childClass;
+    boolean isLEDPermissionDenied = false;
+    boolean isLEDStarted = false;
 
     LEDTester(ReactApplicationContext context) {
         super(context);
         ledTester = new bb.com.bbanalyst.LEDTester();
-        childClass = new ChildClass();
     }
 
     @NonNull
@@ -27,7 +27,7 @@ public class LEDTester extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void startLED() {
-        ledTester.startLED(this.getReactApplicationContext(), this.childClass);
+        ledTester.startLED(this.getReactApplicationContext(), this);
     }
 
     @ReactMethod
@@ -35,18 +35,13 @@ public class LEDTester extends ReactContextBaseJavaModule {
         ledTester.removeAdminAccess(this.getReactApplicationContext());
     }
 
-    private class ChildClass implements ILEDTester {
-        boolean isLEDPermissionDenied = false;
-        boolean isLEDStarted = false;
+    @Override
+    public void ledPermissionDenied() {
+        isLEDPermissionDenied = true;
+    }
 
-        @Override
-        public void ledPermissionDenied() {
-            isLEDPermissionDenied = true;
-        }
-
-        @Override
-        public void ledStarted() {
-            isLEDStarted = true;
-        }
+    @Override
+    public void ledStarted() {
+        isLEDStarted = true;
     }
 }

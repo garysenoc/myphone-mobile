@@ -8,13 +8,20 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
 import bb.com.bbanalyst.CollectInfo;
+import bb.com.bbanalyst.DashboardUtility;
+import bb.com.bbanalyst.DeviceInfoAPI;
+import bb.com.bbanalyst.IDeviceInfo;
+import bb.com.bbanalyst.ResultLog;
 
-public class DeviceInfoTester extends ReactContextBaseJavaModule {
+public class DeviceInfoTester extends ReactContextBaseJavaModule implements IDeviceInfo {
     CollectInfo collectInfo;
+    DeviceInfoAPI deviceInfoAPI;
+    DashboardUtility dashboardUtility;
 
     DeviceInfoTester(ReactApplicationContext context) {
         super(context);
         collectInfo = CollectInfo.getInstance();
+        dashboardUtility = new DashboardUtility();
     }
 
     @NonNull
@@ -24,9 +31,23 @@ public class DeviceInfoTester extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void collectAllInfo() {
-//        TODO
-//        collectInfo.collectAllInfo(this.getReactApplicationContext(), IDeviceInfo);
+    public void collectAllInfo(Promise promise) {
+        try{
+            collectInfo.collectAllInfo(this.getReactApplicationContext(), this);
+            promise.resolve(dashboardUtility.getTestResultJSON(new ResultLog(), deviceInfoAPI));
+        } catch (Exception e){
+            promise.reject("Error DeviceInfoTester collectAllInfo:",e);
+        }
+    }
+
+    @ReactMethod
+    public void getModel(Promise promise){
+        promise.resolve(deviceInfoAPI.getiModel());
+    }
+
+    @ReactMethod
+    public void getManufacturer(Promise promise){
+        promise.resolve(deviceInfoAPI.getiManufacturer());
     }
 
     @ReactMethod
@@ -34,7 +55,7 @@ public class DeviceInfoTester extends ReactContextBaseJavaModule {
         try {
             promise.resolve(collectInfo.getBatteryHealth(this.getReactApplicationContext()));
         } catch (Exception e) {
-            promise.reject("DeviceInfoTester getBatteryHealth:", e);
+            promise.reject("Error DeviceInfoTester getBatteryHealth:", e);
         }
     }
 
@@ -48,7 +69,12 @@ public class DeviceInfoTester extends ReactContextBaseJavaModule {
         try {
             promise.resolve(collectInfo.isSimPresent(this.getReactApplicationContext()));
         } catch (Exception e) {
-            promise.reject("DeviceInfoTester isSimPresent:", e);
+            promise.reject("Error DeviceInfoTester isSimPresent:", e);
         }
+    }
+
+    @Override
+    public void infoCollected(DeviceInfoAPI deviceInfoAPI) {
+        this.deviceInfoAPI = deviceInfoAPI;
     }
 }

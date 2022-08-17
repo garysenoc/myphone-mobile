@@ -2,7 +2,12 @@ import {NativeModules} from 'react-native';
 
 const {KeysTester} = NativeModules;
 
-interface AndroidKeysTesterInterface {}
+interface AndroidKeysTesterInterface {
+  startListeningForHomeKey(callback: () => void): void;
+  startListeningForPowerKey(callback: () => void): void;
+  stopListeningForHomeKey(): void;
+  stopListeningForPowerKey(): void;
+}
 
 interface iOSKeysTesterInterface {}
 

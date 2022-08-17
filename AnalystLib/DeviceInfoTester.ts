@@ -2,7 +2,14 @@ import {NativeModules} from 'react-native';
 
 const {DeviceInfoTester} = NativeModules;
 
-interface AndroidDeviceInfoTesterInterface {}
+interface AndroidDeviceInfoTesterInterface {
+  collectAllInfo(): Promise<String>;
+  getBatteryHealth(): Promise<number>;
+  injectIMEI(imei: String): void;
+  isSimPresent(): Promise<boolean>;
+  getModel(): Promise<String>;
+  getManufacturer(): Promise<String>;
+}
 
 interface iOSDeviceInfoTesterInterface {}
 

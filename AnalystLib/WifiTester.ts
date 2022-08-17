@@ -2,7 +2,11 @@ import {NativeModules} from 'react-native';
 
 const {WifiTester} = NativeModules;
 
-interface AndroidWifiTesterInterface {}
+interface AndroidWifiTesterInterface {
+  startWifiTest(): Promise<String>;
+  enableWifi(): void;
+  disableWifi(): void;
+}
 
 interface iOSWifiTesterInterface {}
 

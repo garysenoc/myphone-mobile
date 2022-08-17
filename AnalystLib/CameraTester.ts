@@ -2,7 +2,10 @@ import {NativeModules} from 'react-native';
 
 const {CameraTester} = NativeModules;
 
-interface AndroidCameraTesterInterface {}
+interface AndroidCameraTesterInterface {
+  FrontCameraID(): Promise<number>;
+  RearCameraID(): Promise<number>;
+}
 
 interface iOSCameraTesterInterface {}
 

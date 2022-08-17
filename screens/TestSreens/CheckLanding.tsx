@@ -1,27 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   ScrollView,
   StatusBar,
-  StyleSheet,
   Text,
-  TextInput,
   useColorScheme,
   View,
   TouchableOpacity,
   Image,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {Styles, colors} from '../../styles/Styles';
-import Footer from '../../components/Footer';
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-
+import {Styles} from '../../styles/Styles';
 import {useNavigation} from '@react-navigation/native';
-import InnerHeader from '../../components/InnerHeader';
-import LinearGradient from 'react-native-linear-gradient';
-import BouncyCheckbox from 'react-native-bouncy-checkbox';
-import Octicons from 'react-native-vector-icons/Octicons';
-import Modal from 'react-native-modal';
 
 type Nav = {
   navigate: (value: string) => void;
@@ -29,13 +18,7 @@ type Nav = {
 
 const CheckLanding = () => {
   const navigation = useNavigation<Nav>();
-
   const isDarkMode = useColorScheme() === 'dark';
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? '#fff' : '#070707',
-  };
-
-  const [skip, setSkip] = useState(false);
 
   return (
     <SafeAreaView>

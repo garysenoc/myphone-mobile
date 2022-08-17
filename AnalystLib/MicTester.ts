@@ -2,7 +2,12 @@ import {NativeModules} from 'react-native';
 
 const {MicTester} = NativeModules;
 
-interface AndroidMicTesterInterface {}
+interface AndroidMicTesterInterface {
+  startListeningToMic(): void;
+  stopListeningToMic(): void;
+  startRecord(): void;
+  playRecord(path: string): void;
+}
 
 interface iOSMicTesterInterface {}
 

@@ -2,12 +2,17 @@ package com.myphoneapp.analystlib;
 
 import androidx.annotation.NonNull;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-public class LEDTester extends ReactContextBaseJavaModule {
+import bb.com.bbanalyst.ILEDTester;
+
+public class LEDTester extends ReactContextBaseJavaModule implements ILEDTester {
     bb.com.bbanalyst.LEDTester ledTester;
+    boolean isLEDPermissionDenied = false;
+    boolean isLEDStarted = false;
 
     LEDTester(ReactApplicationContext context) {
         super(context);
@@ -22,12 +27,21 @@ public class LEDTester extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void startLED() {
-//        TODO
-//        ledTester.startLED(this.getReactApplicationContext(), ILEDTester);
+        ledTester.startLED(this.getReactApplicationContext(), this);
     }
 
     @ReactMethod
     public void removeAdminAccess() {
         ledTester.removeAdminAccess(this.getReactApplicationContext());
+    }
+
+    @Override
+    public void ledPermissionDenied() {
+        isLEDPermissionDenied = true;
+    }
+
+    @Override
+    public void ledStarted() {
+        isLEDStarted = true;
     }
 }

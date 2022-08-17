@@ -8,12 +8,10 @@
  * @format
  */
 import React from 'react';
-import {StyleSheet, Text, useColorScheme, View} from 'react-native';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {StyleSheet} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
+import {createStackNavigator} from '@react-navigation/stack';
 import 'react-native-gesture-handler';
 
 //Screens
@@ -30,8 +28,6 @@ import RepairDetails from './screens/RepairDetails';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import Cart from './screens/Cart';
-import Checkout from './screens/Checkout';
-import Confirmation from './screens/Confirmation';
 import DeviceInformation from './screens/TestSreens/DeviceInformation';
 import Proximity from './screens/TestSreens/Proximity';
 import Gyro from './screens/TestSreens/Gyro';
@@ -65,115 +61,91 @@ import RepairEstimate from './screens/RepairEstimate';
 import RepairDate from './screens/RepairDate';
 import RepairConfirm from './screens/RepairConfirm';
 import {AnalystLibTest} from './screens/AnalystLibTest';
-
-const Section: React.FC<{
-  children: React.ReactNode;
-  title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import TestResultProvider from './provider/TestResultProvider';
 
 const App = () => {
   const Stack = createStackNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          gestureEnabled: true,
-          // ...TransitionPresets.SlideFromRightIOS,
-        }}
-        initialRouteName="AnalystLibTest">
-        <Stack.Screen name="AnalystLibTest" component={AnalystLibTest} />
-        <Stack.Screen name="Home" component={Home} />
+      <TestResultProvider>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            gestureEnabled: true,
+            // ...TransitionPresets.SlideFromRightIOS,
+          }}
+          initialRouteName="Home">
+          <Stack.Screen name="AnalystLibTest" component={AnalystLibTest} />
+          <Stack.Screen name="Home" component={Home} />
 
-        <Stack.Screen name="Sell" component={Sell} />
-        <Stack.Screen name="ProductTypeInner" component={ProductTypeInner} />
-        <Stack.Screen name="SellDetails" component={SellDetails} />
+          <Stack.Screen name="Sell" component={Sell} />
+          <Stack.Screen name="ProductTypeInner" component={ProductTypeInner} />
+          <Stack.Screen name="SellDetails" component={SellDetails} />
 
-        <Stack.Screen name="Buy" component={Buy} />
-        <Stack.Screen
-          name="BuyProductTypeInner"
-          component={BuyProductTypeInner}
-        />
-        <Stack.Screen name="BuyDetails" component={BuyDetails} />
+          <Stack.Screen name="Buy" component={Buy} />
+          <Stack.Screen
+            name="BuyProductTypeInner"
+            component={BuyProductTypeInner}
+          />
+          <Stack.Screen name="BuyDetails" component={BuyDetails} />
 
-        <Stack.Screen name="Repair" component={Repair} />
-        <Stack.Screen
-          name="RepairProductTypeInner"
-          component={RepairProductTypeInner}
-        />
-        <Stack.Screen name="RepairDetails" component={RepairDetails} />
-        <Stack.Screen name="RepairIssue" component={RepairIssue} />
-        <Stack.Screen name="RepairEstimate" component={RepairEstimate} />
-        <Stack.Screen name="RepairDate" component={RepairDate} />
-        <Stack.Screen name="RepairConfirm" component={RepairConfirm} />
+          <Stack.Screen name="Repair" component={Repair} />
+          <Stack.Screen
+            name="RepairProductTypeInner"
+            component={RepairProductTypeInner}
+          />
+          <Stack.Screen name="RepairDetails" component={RepairDetails} />
+          <Stack.Screen name="RepairIssue" component={RepairIssue} />
+          <Stack.Screen name="RepairEstimate" component={RepairEstimate} />
+          <Stack.Screen name="RepairDate" component={RepairDate} />
+          <Stack.Screen name="RepairConfirm" component={RepairConfirm} />
 
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Register" component={Register} />
-        <Stack.Screen name="MyProfile" component={MyProfile} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="MyProfile" component={MyProfile} />
 
-        <Stack.Screen name="Cart" component={Cart} />
-        <Stack.Screen name="Checkout" component={Cart} />
-        {/* <Stack.Screen name="Checkout" component={Checkout} /> */}
-        <Stack.Screen name="Confirmation" component={Cart} />
-        <Stack.Screen name="Orders" component={Orders} />
-        <Stack.Screen name="OrderDetails" component={OrderDetails} />
+          <Stack.Screen name="Cart" component={Cart} />
+          <Stack.Screen name="Checkout" component={Cart} />
+          {/* <Stack.Screen name="Checkout" component={Checkout} /> */}
+          <Stack.Screen name="Confirmation" component={Cart} />
+          <Stack.Screen name="Orders" component={Orders} />
+          <Stack.Screen name="OrderDetails" component={OrderDetails} />
 
-        {/* TESTING SCREENS */}
+          {/* TESTING SCREENS */}
+          <Stack.Screen name="CheckLanding" component={CheckLanding} />
+          <Stack.Screen name="EnterCode" component={EnterCode} />
 
-        <Stack.Screen name="CheckLanding" component={CheckLanding} />
-        <Stack.Screen name="EnterCode" component={EnterCode} />
+          <Stack.Screen
+            name="DeviceInformation"
+            component={DeviceInformation}
+          />
+          <Stack.Screen name="Proximity" component={Proximity} />
+          <Stack.Screen name="Gyro" component={Gyro} />
+          <Stack.Screen name="Accelerometer" component={Accelerometer} />
+          <Stack.Screen name="FaceId" component={FaceId} />
+          <Stack.Screen name="Microphone" component={Microphone} />
+          <Stack.Screen name="DeviceButton" component={DeviceButton} />
+          <Stack.Screen name="Display" component={Display} />
+          <Stack.Screen name="TouchResponse" component={TouchResponse} />
+          <Stack.Screen name="Charging" component={Charging} />
+          <Stack.Screen name="Connectivity" component={Connectivity} />
+          <Stack.Screen name="Call" component={Call} />
+          <Stack.Screen name="Camera" component={Camera} />
+          <Stack.Screen name="CameraPicture" component={CameraPicture} />
 
-        <Stack.Screen name="DeviceInformation" component={DeviceInformation} />
-        <Stack.Screen name="Proximity" component={Proximity} />
-        <Stack.Screen name="Gyro" component={Gyro} />
-        <Stack.Screen name="Accelerometer" component={Accelerometer} />
-        <Stack.Screen name="FaceId" component={FaceId} />
-        <Stack.Screen name="Microphone" component={Microphone} />
-        <Stack.Screen name="DeviceButton" component={DeviceButton} />
-        <Stack.Screen name="Display" component={Display} />
-        <Stack.Screen name="TouchResponse" component={TouchResponse} />
-        <Stack.Screen name="Charging" component={Charging} />
-        <Stack.Screen name="Connectivity" component={Connectivity} />
-        <Stack.Screen name="Call" component={Call} />
-        <Stack.Screen name="Camera" component={Camera} />
-        <Stack.Screen name="CameraPicture" component={CameraPicture} />
+          <Stack.Screen name="Headset" component={Headset} />
+          <Stack.Screen name="Speaker" component={Speaker} />
+          <Stack.Screen name="Vibration" component={Vibration} />
+          <Stack.Screen name="Cosmetic" component={Cosmetic} />
+          <Stack.Screen name="Summary" component={Summary} />
+          <Stack.Screen name="Result" component={Result} />
 
-        <Stack.Screen name="Headset" component={Headset} />
-        <Stack.Screen name="Speaker" component={Speaker} />
-        <Stack.Screen name="Vibration" component={Vibration} />
-        <Stack.Screen name="Cosmetic" component={Cosmetic} />
-        <Stack.Screen name="Summary" component={Summary} />
-        <Stack.Screen name="Result" component={Result} />
-
-        <Stack.Screen name="MyCommission" component={MyCommission} />
-        <Stack.Screen name="BrandAmbassador" component={BrandAmbassador} />
-        <Stack.Screen name="CustomerService" component={CustomerService} />
-      </Stack.Navigator>
+          <Stack.Screen name="MyCommission" component={MyCommission} />
+          <Stack.Screen name="BrandAmbassador" component={BrandAmbassador} />
+          <Stack.Screen name="CustomerService" component={CustomerService} />
+        </Stack.Navigator>
+      </TestResultProvider>
     </NavigationContainer>
   );
 };

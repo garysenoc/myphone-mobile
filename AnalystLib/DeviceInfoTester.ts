@@ -7,6 +7,8 @@ interface AndroidDeviceInfoTesterInterface {
   getBatteryHealth(): Promise<number>;
   injectIMEI(imei: String): void;
   isSimPresent(): Promise<boolean>;
+  getModel(): Promise<String>;
+  getManufacturer(): Promise<String>;
 }
 
 interface iOSDeviceInfoTesterInterface {}

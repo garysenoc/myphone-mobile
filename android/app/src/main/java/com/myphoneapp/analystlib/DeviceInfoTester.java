@@ -41,6 +41,16 @@ public class DeviceInfoTester extends ReactContextBaseJavaModule implements IDev
     }
 
     @ReactMethod
+    public void getModel(Promise promise){
+        promise.resolve(deviceInfoAPI.getiModel());
+    }
+
+    @ReactMethod
+    public void getManufacturer(Promise promise){
+        promise.resolve(deviceInfoAPI.getiManufacturer());
+    }
+
+    @ReactMethod
     public void getBatteryHealth(Promise promise) {
         try {
             promise.resolve(collectInfo.getBatteryHealth(this.getReactApplicationContext()));
